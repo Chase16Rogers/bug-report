@@ -58,7 +58,7 @@ export class BugsController extends BaseController {
       const data = req.body
       data.creatorId = req.userInfo.id
       console.log('edit req' + req.body)
-      const query = { _id: req.params.id, creatorId: req.userInfo.id }
+      const query = { _id: req.params.id, creatorId: req.userInfo.id, closed: false }
       res.send(await bugsService.edit(query, data))
     } catch (error) {
       next(error)
