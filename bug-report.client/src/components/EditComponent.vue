@@ -72,7 +72,7 @@ export default {
         switch (name) {
           case 'bug':
             try {
-              console.log('here')
+              // console.log('here')
               $('#ed' + props.edit.id).modal('hide')
               const data = { description: state.editData }
               await bugsService.editBug(props.edit.id, data)

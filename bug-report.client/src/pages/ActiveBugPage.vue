@@ -99,7 +99,7 @@ export default {
     })
     onMounted(async() => {
       try {
-        console.log(route.params.id)
+        // console.log(route.params.id)
         await bugsService.getActiveBug(route.params.id)
         await notesService.getNotes(route.params.id)
         AppState.show = true
@@ -110,7 +110,7 @@ export default {
     return {
       state,
       status(bool) {
-        console.log(bool)
+        // console.log(bool)
         if (bool) {
           return 'closed'
         } else {
